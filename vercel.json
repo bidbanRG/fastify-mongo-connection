@@ -2,9 +2,9 @@
    "version": 2,
    "name": "nightchillins_api",
    "builds": [
-      { "src": "dist/app.js", "use": "@vercel/node" }
+      { "src": "dist/app.ts", "use": "@vercel/node" }
    ],
    "routes": [
-      { "src": "/(.*)", "dest": "dist/app.js" }
+      { "src": "/(.*)", "dest": "src/app.ts" }
    ]
 }
