@@ -1,6 +1,6 @@
 {
    "version": 2,
-   "name": "nightchillins_api",
+   "name": "nothing",
    "builds": [
       { "src": "server.js", "use": "@vercel/node" }
    ],
