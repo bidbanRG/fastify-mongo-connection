@@ -12,6 +12,6 @@ export default fp<SensibleOptions>(async (fastify) => {
   fastify.register(cors)
   fastify.register(fastifyMongodb,{
       forceClose: true,
-      url: ''
+      url: 'mongodb+srv://bidesh:bidesh@cluster0.jeepdfc.mongodb.net/Nightchillins?retryWrites=true&w=majoritymongodb+srv://bidesh:bidesh@cluster0.jeepdfc.mongodb.net/Nightchillins?retryWrites=true&w=majority'
   })
 })
