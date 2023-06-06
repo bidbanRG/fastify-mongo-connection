@@ -1,7 +1,7 @@
 import { join } from 'path';
 import AutoLoad, {AutoloadPluginOptions} from '@fastify/autoload';
 import { FastifyPluginAsync } from 'fastify';
-import Fastify from 'fastify';
+
 export type AppOptions = {
   // Place your custom options for app below here.
 } & Partial<AutoloadPluginOptions>;
@@ -37,16 +37,16 @@ const app: FastifyPluginAsync<AppOptions> = async (
 };
 
 
-const APP = Fastify();
-const port = 3000;
-APP.register(app);
+// const APP = Fastify();
+// const port = 3000;
+// APP.register(app);
 
-APP.listen( { port },(err) => {
+// APP.listen( { port },(err) => {
      
-     if(err)
-       console.log(err);
-     else console.log('running'); 
-})
+//      if(err)
+//        console.log(err);
+//      else console.log('running'); 
+// })
 
-export default APP;
-export { APP, options }
+export default app;
+export { app, options }
