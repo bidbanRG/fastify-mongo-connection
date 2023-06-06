@@ -11,7 +11,11 @@ const Fastify = require("fastify");
 const app = Fastify();
 
 // Register your application as a normal plugin.
-app.register(require("./dist/app.js"));
+app.register(require( __dirname + "dist/app.js"),(err)=>{
+   
+   console.log(err);
+
+});
 
 app.listen({ port: process.env.PORT || 3000 }, (err) => {
   if (err) {
@@ -19,3 +23,6 @@ app.listen({ port: process.env.PORT || 3000 }, (err) => {
     process.exit(1)
   }else console.log('listening');
 })
+
+
+module.export = app;
