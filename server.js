@@ -11,10 +11,11 @@ const Fastify = require("fastify");
 const app = Fastify();
 
 // Register your application as a normal plugin.
-app.register(require( __dirname + "dist/app.js"),(err)=>{
+app.register(require( __dirname + "/dist/app.js"),(err)=>{
    
+   if(err)
    console.log(err);
-
+    else console.log('import app succesfull')
 });
 
 app.listen({ port: process.env.PORT || 3000 }, (err) => {
